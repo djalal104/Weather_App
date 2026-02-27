@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <main class="dashboard-container">
+        <div class="weather-card glass-effect">
+            <!-- Header with Search -->
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="inputCity" class="search-input" placeholder="Search for a city..."
+                        autocomplete="off">
+                    <button class="search-btn" onclick="getWeather()" title="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <p class="date-display" id="Date"></p>
+            </div>
+
+            <!-- Main Weather Display -->
+            <div class="weather-display">
+                <div class="location-section">
+                    <h1 class="city-name" id="CityName">City</h1>
+                    <p class="weather-description" id="description">--</p>
+                </div>
+
+                <div class="temperature-section">
+                    <div class="weather-icon" id="img"></div>
+                    <div class="temperature-display">
+                        <span class="current-temp" id="temp">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Details Grid -->
+            <div class="weather-details">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="detail-content">
+                        <p class="detail-label">High</p>
+                        <p class="detail-value" id="tempMax">--°C</p>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="detail-content">
+                        <p class="detail-label">Low</p>
+                        <p class="detail-value" id="tempMin">--°C</p>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <div class="detail-content">
+                        <p class="detail-label">Humidity</p>
+                        <p class="detail-value" id="humidity">--%</p>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="detail-content">
+                        <p class="detail-label">Wind</p>
+                        <p class="detail-value" id="windSpeed">-- m/s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
